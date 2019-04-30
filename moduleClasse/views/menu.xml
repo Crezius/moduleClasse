@@ -1,0 +1,12 @@
+<odoo>
+	<data>
+		<menuitem name="Lycée" id="mon_menu_root"></menuitem>
+		<menuitem name="Configuration" id="configuration" parent="mon_menu_root"></menuitem>
+		
+		<menuitem name="Professeur" id="professeur" parent="configuration" action="iut_professeur_model"></menuitem>
+		<menuitem name="Classe" id="classe" parent="configuration" action="iut_classe_model"></menuitem>
+		<menuitem name="Etudiant" id="etudiant" parent="configuration" action="iut_etudiant_model"></menuitem>
+		<menuitem name="Cours" id="cours" parent="configuration" action="iut_cours_model"></menuitem>
+		
+	</data>
+</odoo>

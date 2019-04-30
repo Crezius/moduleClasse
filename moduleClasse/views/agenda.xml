@@ -1,0 +1,13 @@
+<odoo>
+	<data>
+	
+		<record id="iut_agenda_model" model="ir.actions.act_window">
+			<field name="name">Agenda</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">iutagenda</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>	
+	

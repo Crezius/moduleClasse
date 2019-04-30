@@ -1,0 +1,44 @@
+<odoo>
+	<data>
+		<record id="iut_professeur_model" model="ir.actions.act_window">
+			<field name="name">Professeur</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record id="professeur_ma_view_avec_un_arbre" model="ir.ui.view">
+			<field name="name">professeur</field>
+  			<field name="inherit_id" ref="base.view_partner_tree" />
+  			<field name="model">res.partner</field>
+			<field name="priority">1</field>
+			<field name="arch" type="xml">
+				<field name="phone" position="before">
+					<field name="name" string="nom"/>
+					<field name="classe_ids" string="classes"/>
+				</field>
+			</field>
+		</record>
+		
+		<record id="professeur_ma_view_avec_un_formulaire" model="ir.ui.view">
+			<field name="name">professeur</field>
+  			<field name="inherit_id" ref="base.view_partner_form" />
+  			<field name="model">res.partner</field>
+			<field name="priority">1</field>
+			<field name="arch" type="xml">
+			
+				<page name="sales_purchases" position="after">
+					<group>
+						<group>
+							<field name="name" string="nom"/>
+							<field name="classe_ids" string="salle"/>
+						</group>
+					</group>
+                         
+				</page>
+			</field>
+		</record>
+		
+	</data>
+</odoo>

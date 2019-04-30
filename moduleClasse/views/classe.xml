@@ -1,0 +1,53 @@
+<odoo>
+	<data>
+	
+		<record id="iut_classe_model" model="ir.actions.act_window">
+			<field name="name">Classe</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">iutclasse</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record id="classe_ma_view_avec_un_arbre" model="ir.ui.view">
+			<field name="name">classe_ma_view_avec_un_arbre.tree</field>
+			<field name="model">iutclasse</field>
+			<field name="priority">1</field>
+			<field name="arch" type="xml">
+				<tree string="Sales Orders" >
+					<field name="name" string="nom"/>
+					<field name="level" string="niveau"/>
+					<field name="prof_ids" string="professeurs"/>
+					<field name="nb_etudiant" string="nombre d'étudiants"/>
+					<field name="etudiant_ids" string="étudiants"/>					
+					<field name="agenda_ids" string="agendas"/>
+				</tree>		
+			</field>
+		</record>
+		
+		<record id="classe_ma_view_avec_un_formulaire" model="ir.ui.view">
+			<field name="name">classe_ma_view_avec_un_formulaire.form</field>
+			<field name="model">iutclasse</field>
+			<field name="priority">1</field>
+			<field name="arch" type="xml">
+				<form string="classe">
+					
+					<sheet>
+						<group>
+							<group>
+								<field name="name" string="nom"/>
+								<field name="level" string="niveau"/>
+								<field name="etudiant_ids" string="étudiants"/>
+								<field name="prof_ids" widget="many2many_tags" string="professeurs"/>	
+								<field name="agenda_ids" widget="many2many_tags" string="agendas"/>	
+							</group>
+						</group>
+					</sheet>
+				</form>
+				
+			</field>
+		</record>
+		
+	</data>
+</odoo>	
+	

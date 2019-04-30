@@ -1,0 +1,53 @@
+<odoo>
+	<data>
+	
+		<record id="iut_etudiant_model" model="ir.actions.act_window">
+			<field name="name">Etudiant</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">iutetudiant</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record id="etudiant_ma_view_avec_un_arbre" model="ir.ui.view">
+			<field name="name">etudiant_ma_view_avec_un_arbre.tree</field>
+			<field name="model">iutetudiant</field>
+			<field name="priority">1</field>
+			<field name="arch" type="xml">
+				<tree string="Sales Orders" >
+					<field name="firstname" string="prénom"/>
+					<field name="lastname" string="nom"/>
+					<field name="birthdate" string="date de naissance"/>
+					<field name="age" string="age"/>
+					<field name="classe_id" string="classe"/>
+				</tree>		
+			</field>
+		</record>
+		
+		<record id="etudiant_ma_view_avec_un_formulaire" model="ir.ui.view">
+			<field name="name">etudiant_ma_view_avec_un_formulaire.form</field>
+			<field name="model">iutetudiant</field>
+			<field name="priority">1</field>
+			<field name="arch" type="xml">
+				<form string="étudiant">
+					
+					<sheet>
+						<group>
+							<group>
+								<field name="firstname" string="prénom"/>
+								<field name="lastname" string="nom"/>
+								<field name="birthdate" string="date de naissance"/>
+								<field name="age"/>	
+								<field name="classe_id"/>	
+							</group>
+						</group>
+					</sheet>
+				</form>
+				
+			</field>
+		</record>
+		
+	</data>
+</odoo>
+		
+	

@@ -1,0 +1,48 @@
+<odoo>
+	<data>
+	
+		<record id="iut_cours_model" model="ir.actions.act_window">
+			<field name="name">Cours</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">iutcours</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record id="cours_ma_view_avec_un_arbre" model="ir.ui.view">
+			<field name="name">cours_ma_view_avec_un_arbre.tree</field>
+			<field name="model">iutcours</field>
+			<field name="priority">1</field>
+			<field name="arch" type="xml">
+				<tree string="Sales Orders" >
+					<field name="name" string="nom"/>
+					<field name="agenda_ids" string="agendas"/>
+				</tree>		
+			</field>
+		</record>
+		
+		<record id="cours_ma_view_avec_un_formulaire" model="ir.ui.view">
+			<field name="name">cours_ma_view_avec_un_formulaire.form</field>
+			<field name="model">iutcours</field>
+			<field name="priority">1</field>
+			<field name="arch" type="xml">
+				<form string="cours">
+					
+					<sheet>
+						<group>
+							<group>
+								<field name="name" string="nom"/>
+								<field name="agenda_ids" widget="many2many_tags" string="agendas"/>
+								
+							</group>
+						</group>
+					</sheet>
+				</form>
+				
+			</field>
+		</record>
+		
+	</data>
+</odoo>
+		
+	
